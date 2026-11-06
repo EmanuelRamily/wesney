@@ -1,0 +1,246 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #f5f5f5;
+    --cor-branco: #ffffff;
+    --cor-texto: #222222;
+    --cor-secundaria: #666666;
+    --cor-borda: #e2e2e2;
+    --cor-botao: #222222;
+    --cor-botao-hover: #444444;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: var(--cor-branco);
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 18px 5%;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--cor-secundaria);
+}
+
+/* ===== PRODUTOS ===== */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.produto,
+.card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.2s ease;
+}
+
+.produto:hover,
+.card:hover {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.preco {
+    color: var(--cor-texto);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    background-color: var(--cor-branco);
+    font-size: 15px;
+    color: var(--cor-texto);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #777777;
+}
+
+/* ===== BOTÕES ===== */
+button,
+.btn {
+    display: inline-block;
+    background-color: var(--cor-botao);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+/* ===== TABELAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cor-branco);
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+th {
+    background-color: #eeeeee;
+    font-weight: 700;
+}
+
+tr:hover {
+    background-color: #fafafa;
+}
+
+/* ===== MENSAGENS ===== */
+.sucesso {
+    background-color: #eeeeee;
+    color: #222222;
+    border: 1px solid #d5d5d5;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.erro {
+    background-color: #f2f2f2;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: var(--cor-branco);
+    border-top: 1px solid var(--cor-borda);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: var(--cor-secundaria);
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    main {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
